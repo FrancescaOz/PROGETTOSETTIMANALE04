@@ -1,0 +1,215 @@
+* {
+  font-family: 'Lexend', sans-serif;
+}
+h1, h2 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+p {
+  line-height: 2;
+}
+.container {
+  width: 900px;
+  margin: auto;
+  background-color: #936c1fd3;
+
+}
+
+.text-center {
+  text-align: center;
+}
+
+.icon-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#griglia>div {
+  margin: 20px 10px;
+  width: 120px;
+  height: 120px;
+  background-image: url('../images/back.jpg');
+  background-size: cover;
+  background-color: wheat;
+  border: 1px solid black;
+  border-radius: 10px;
+
+}
+
+.timer {
+  padding: 10px 0;
+}
+
+.icon {
+  font-size: 80px;
+  text-align: center;
+  visibility: visible !important;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: wait;
+}
+
+.show {
+  animation-name: rotazione-carta;
+  animation-duration: .5s;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  visibility: visible !important;
+  opacity: 100 !important;
+
+}
+
+.find {
+  animation-name: indovinato;
+  animation-duration: .5s;
+  background-color: wheat;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.button {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #c39539;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: black;
+  border: none;
+}
+
+#modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#modal.active {
+  display: flex;
+}
+
+#modal h2 {
+  margin-top: 20px;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    width: 400px;
+  }
+
+  #griglia>div {
+    margin: 5px 5px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon {
+    font-size: 60px;
+
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: 230px;
+  }
+
+  #griglia>div {
+    margin: 5px 5px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    font-size: 20px;
+
+  }
+}
+
+@keyframes indovinato {
+  from {
+    transform: rotate(0deg);
+
+  }
+
+  to {
+    transform: rotate(360deg);
+    color: white;
+
+  }
+}
+
+@keyframes rotazione-carta {
+  from {
+    transform: perspective(300px) rotate3d(0, 1, 0, 80deg);
+    animation-timing-function: ease-in;
+  }
+
+  50% {
+    transform: perspective(300px) rotate3d(0, 1, 0, -10deg);
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    transform: perspective(300px);
+    animation-timing-function: ease-in;
+  }
+
+}
+
+
+/*INFO A LATO*/
+
+#contenitoreInfo{
+  position: relative;
+}
+
+#info {
+  width: 400px;
+  padding: 10px 0;
+  text-align: center;
+  background-color: wheat;
+  position: absolute;
+  top: 60px;
+  left: 75vw;
+}
+
+#puntoInterrogativo {
+  text-align: right;
+  margin-right: 59px;
+}
+
+.fa-regular {
+  margin-top: 15px;
+  margin-right: 70px;
+  font-size: 2rem;
+}
+
+.fa-regular:hover {
+  color: #936C1F;
+}

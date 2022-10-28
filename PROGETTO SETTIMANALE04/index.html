@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Memory Game</title>
+    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="https://kit.fontawesome.com/163af15cb4.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <h1>MEMORY GAME</h1>
+    <h2>Trova la coppia e metti alla prova il tuo tempo</h2>
+    <div id="contenitoreInfo">
+        <div id="puntoInterrogativo">
+            <i onclick=infoMenu() class="fa-regular fa-circle-question"></i>
+        </div>
+        <div id="info">
+            <p><b>Obiettivo del gioco:</b> abbina le 12 tessere corrispondenti per vincere la partita.
+                <br>◈ Clicca su due carte per rivelarle.
+                <br>◈ Se le carte riporteranno lo stesso simbolo rimarranno svelate sul tavolo.
+            </p>
+        </div>
+    </div>
+
+    <div class="container icon-grid" id="griglia"></div>
+    <div class="container text-center">
+        <input type="button" id="button" class="button" onclick=startGame() value="Ricomincia">
+        <div class="timer">Tempo: 0 min 0 sec</div>
+    </div>
+
+    <div id="modal">
+        <div class="content">
+            <h2>Congratulazioni! Hai risolto il gioco in: </h2>
+            <p><span id=tempoTrascorso> </span> </p>
+            <p><input type="button" class="button" onclick=playAgain() value="Altra partita"></p>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js">
+    </script>
+</body>
+
+</html>
