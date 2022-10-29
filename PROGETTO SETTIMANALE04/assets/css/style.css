@@ -1,11 +1,11 @@
 * {
   font-family: 'Lexend', sans-serif;
 }
-h1, h2 {
+h1, h3 {
   text-align: center;
 }
 
-h2 {
+h3 {
   font-size: 1.3rem;
 }
 
@@ -205,7 +205,6 @@ p {
 }
 
 .fa-regular {
-  margin-top: 15px;
   margin-right: 70px;
   font-size: 2rem;
 }
